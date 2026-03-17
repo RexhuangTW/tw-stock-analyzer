@@ -11,6 +11,10 @@ ENV/
 # 設定檔 (含敏感資訊)
 config/settings.py
 
+# 快取資料
+cache/
+*.pkl
+
 # IDE
 .vscode/
 .idea/
@@ -30,3 +34,6 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# 輸出圖表
+output_*.png
