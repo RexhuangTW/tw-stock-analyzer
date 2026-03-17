@@ -22,7 +22,7 @@ cache/
 *.swo
 
 # 資料檔
-data/
+/data/
 *.csv
 *.xlsx
 

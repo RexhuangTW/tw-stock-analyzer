@@ -17,6 +17,9 @@ class TWSEFetcher:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         })
+        # TWSE 伺服器有時會出現 SSL 憑證問題 (Missing Subject Key Identifier)
+        # 先嘗試正常驗證，失敗時自動降級為不驗證
+        self._verify_ssl = True
     
     @cached(ttl_hours=24)
     def get_daily_price(self, stock_id: str, date: Optional[str] = None) -> pd.DataFrame:
@@ -41,7 +44,14 @@ class TWSEFetcher:
         }
         
         try:
-            resp = self.session.get(url, params=params, timeout=10)
+            try:
+                resp = self.session.get(url, params=params, timeout=10, verify=self._verify_ssl)
+            except requests.exceptions.SSLError:
+                import warnings, urllib3
+                warnings.warn("TWSE SSL 憑證驗證失敗，改用不驗證模式連線", stacklevel=2)
+                urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+                self._verify_ssl = False
+                resp = self.session.get(url, params=params, timeout=10, verify=False)
             resp.raise_for_status()
             data = resp.json()
             
