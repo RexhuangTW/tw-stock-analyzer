@@ -1,7 +1,14 @@
-"""台股分析器 Streamlit Web UI"""
-# 必須在最開始就初始化路徑
-import init_path
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import sys
+from pathlib import Path
 
+# 在所有其他 import 之前設定路徑
+_project_root = Path(__file__).parent.absolute()
+if str(_project_root) not in sys.path:
+    sys.path.insert(0, str(_project_root))
+
+"""台股分析器 Streamlit Web UI"""
 import streamlit as st
 import pandas as pd
 from datetime import datetime
