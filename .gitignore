@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# 設定檔 (含敏感資訊)
+config/settings.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 資料檔
+data/
+*.csv
+*.xlsx
+
+# 測試
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
