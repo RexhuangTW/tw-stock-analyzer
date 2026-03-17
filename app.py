@@ -2,8 +2,15 @@
 # -*- coding: utf-8 -*-
 """台股分析器 Streamlit Web UI"""
 
-# 修正 import 路徑 - 必須在所有 import 之前
-import fix_imports
+# === 修正 import 路徑 - 必須在所有其他 import 之前 ===
+import sys
+import os
+
+# 取得專案根目錄並加入 Python 路徑
+_project_root = os.path.dirname(os.path.abspath(__file__))
+if _project_root not in sys.path:
+    sys.path.insert(0, _project_root)
+# ========================================================
 
 import streamlit as st
 import pandas as pd
