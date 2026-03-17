@@ -1,0 +1,32 @@
+[project]
+name = "tw-stock-analyzer"
+version = "1.5.0"
+description = "台股分析器 - 技術指標、選股、回測系統"
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit>=1.28.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
+    "pillow>=10.0.0",
+    "openpyxl>=3.1.0",
+    "requests>=2.31.0",
+    "numpy>=1.24.0",
+    "matplotlib>=3.7.0",
+    "yfinance>=0.2.0",
+    "python-telegram-bot>=20.0",
+    "discord-webhook>=1.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "mypy>=1.5.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
