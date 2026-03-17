@@ -1,10 +1,6 @@
 """台股分析器 Streamlit Web UI"""
-import sys
-import os
-from pathlib import Path
-
-# 確保可以導入 src 模組
-sys.path.insert(0, str(Path(__file__).parent))
+# 必須在最開始就初始化路徑
+import init_path
 
 import streamlit as st
 import pandas as pd
