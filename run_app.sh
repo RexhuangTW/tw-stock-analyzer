@@ -10,5 +10,10 @@ echo ""
 # 設定 PYTHONPATH 確保可以找到 src 模組
 export PYTHONPATH="$(pwd):$PYTHONPATH"
 
-# 使用 uv 執行 streamlit
-uv run streamlit run app.py
+# 檢查 streamlit 是否安裝
+if ! command -v streamlit &> /dev/null; then
+    echo "❌ streamlit 未安裝在 PATH 中，嘗試使用 python3 -m streamlit..."
+    python3 -m streamlit run app.py
+else
+    streamlit run app.py
+fi
