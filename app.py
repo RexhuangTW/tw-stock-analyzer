@@ -2,13 +2,8 @@
 # -*- coding: utf-8 -*-
 """台股分析器 Streamlit Web UI"""
 
-import sys
-from pathlib import Path
-
-# 在所有其他 import 之前設定路徑
-_project_root = Path(__file__).parent.absolute()
-if str(_project_root) not in sys.path:
-    sys.path.insert(0, str(_project_root))
+# 修正 import 路徑 - 必須在所有 import 之前
+import fix_imports
 
 import streamlit as st
 import pandas as pd
