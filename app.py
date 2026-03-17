@@ -13,6 +13,25 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 
+# 預先載入所有 src 模組
+from src.data.fetcher import TWSEFetcher
+from src.data.yahoo_fetcher import YahooFetcher
+from src.indicators.technical import (
+    calculate_ma, calculate_rsi, calculate_macd, 
+    calculate_kd, calculate_bollinger_bands
+)
+                # 已在開頭 import
+    create_candlestick_chart, create_technical_chart, create_backtest_chart
+)
+from src.screener.strategies import (
+    screen_rsi_oversold, screen_golden_cross, screen_momentum
+)
+from src.screener.advanced_strategies import (
+    screen_breakout_with_volume, screen_bollinger_squeeze, 
+    screen_obv_divergence, screen_multi_factor
+)
+from src.backtest.engine import BacktestEngine, sma_crossover_strategy, rsi_strategy
+
 # 頁面配置
 st.set_page_config(
     page_title="台股分析器",
@@ -84,7 +103,7 @@ if page == "📊 K線圖":
                 col4.metric("MA5/MA20", f"{latest['ma5']:.1f}/{latest['ma20']:.1f}" if pd.notna(latest['ma5']) else "N/A")
                 
                 # 繪製圖表
-                from src.visualization.plotly_charts import create_candlestick_chart, create_technical_chart
+                # 已在開頭 import
                 
                 st.subheader("K 線圖")
                 fig1 = create_candlestick_chart(
@@ -221,7 +240,7 @@ elif page == "🔄 策略回測":
                 st.metric("交易次數", result['total_trades'])
                 
                 # 回測圖表
-                from src.visualization.plotly_charts import create_backtest_chart
+                # 已在開頭 import
                 
                 fig = create_backtest_chart(
                     result['equity_curve'],
