@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""台股分析器 Streamlit Web UI"""
+
 import sys
 from pathlib import Path
 
@@ -8,7 +10,6 @@ _project_root = Path(__file__).parent.absolute()
 if str(_project_root) not in sys.path:
     sys.path.insert(0, str(_project_root))
 
-"""台股分析器 Streamlit Web UI"""
 import streamlit as st
 import pandas as pd
 from datetime import datetime
@@ -16,23 +17,11 @@ from datetime import datetime
 # 預先載入所有 src 模組
 from src.data.fetcher import TWSEFetcher
 from src.data.yahoo_fetcher import YahooFetcher
-from src.indicators.technical import (
-    calculate_ma, calculate_rsi, calculate_macd, 
-    calculate_kd, calculate_bollinger_bands
-)
-                # 已在開頭 import
-    create_candlestick_chart, create_technical_chart, create_backtest_chart
-)
-from src.screener.strategies import (
-    screen_rsi_oversold, screen_golden_cross, screen_momentum
-)
-from src.screener.advanced_strategies import (
-    screen_breakout_with_volume, screen_bollinger_squeeze, 
-    screen_obv_divergence, screen_multi_factor
-)
+from src.indicators.technical import calculate_ma, calculate_rsi, calculate_macd, calculate_kd, calculate_bollinger_bands
+from src.visualization.plotly_charts import create_candlestick_chart, create_technical_chart, create_backtest_chart
+from src.screener.strategies import screen_rsi_oversold, screen_golden_cross, screen_momentum
+from src.screener.advanced_strategies import screen_breakout_with_volume, screen_bollinger_squeeze, screen_obv_divergence, screen_multi_factor
 from src.backtest.engine import BacktestEngine, sma_crossover_strategy, rsi_strategy
-
-# 頁面配置
 st.set_page_config(
     page_title="台股分析器",
     page_icon="📊",
