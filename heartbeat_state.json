@@ -1,0 +1,14 @@
+{
+  "last_screening": null,
+  "last_review": null,
+  "last_notification": null,
+  "screening_success_rate": 0.0,
+  "total_screenings": 0,
+  "parameters": {
+    "rsi_threshold": 35,
+    "multi_factor_min": 60,
+    "lookback_days": 20
+  },
+  "strategy_performance": {},
+  "last_memory_organize": "2026-03-17"
+}

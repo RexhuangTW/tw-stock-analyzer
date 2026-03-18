@@ -1,0 +1,35 @@
+{
+  "picks": [
+    {
+      "date": "2026-03-18",
+      "buys": [],
+      "watches": [
+        {
+          "stock_id": "3231",
+          "score": 60.8,
+          "close": 130.5
+        },
+        {
+          "stock_id": "2308",
+          "score": 60.4,
+          "close": 1465.0
+        },
+        {
+          "stock_id": "2412",
+          "score": 60.4,
+          "close": 137.5
+        },
+        {
+          "stock_id": "8046",
+          "score": 60.4,
+          "close": 567.0
+        },
+        {
+          "stock_id": "2486",
+          "score": 60.4,
+          "close": 163.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "last_updated": "2026-03-18 18:12:22",
+  "strategies": {
+    "rsi_oversold": {
+      "performance": {
+        "total_trades": 13,
+        "win_rate": 84.6,
+        "avg_return": 4.38,
+        "max_return": 13.18,
+        "min_return": -5.77,
+        "avg_hold_days": 13.8,
+        "total_return": 56.88,
+        "profit_factor": 8.76,
+        "score": 11.11
+      },
+      "params": {
+        "rsi_threshold": 25
+      },
+      "default_params": {
+        "rsi_threshold": 30
+      }
+    },
+    "golden_cross": {
+      "performance": {
+        "total_trades": 28,
+        "win_rate": 42.9,
+        "avg_return": 6.63,
+        "max_return": 56.65,
+        "min_return": -12.38,
+        "avg_hold_days": 13.3,
+        "total_return": 185.75,
+        "profit_factor": 3.18,
+        "score": 8.53
+      },
+      "params": {},
+      "default_params": {}
+    },
+    "macd_cross": {
+      "performance": {
+        "total_trades": 42,
+        "win_rate": 33.3,
+        "avg_return": 4.58,
+        "max_return": 62.4,
+        "min_return": -12.59,
+        "avg_hold_days": 10.5,
+        "total_return": 192.38,
+        "profit_factor": 2.54,
+        "score": 3.88
+      },
+      "params": {},
+      "default_params": {}
+    },
+    "bollinger_lower": {
+      "performance": {
+        "total_trades": 12,
+        "win_rate": 66.7,
+        "avg_return": 3.08,
+        "max_return": 19.56,
+        "min_return": -7.69,
+        "avg_hold_days": 15.2,
+        "total_return": 37.01,
+        "profit_factor": 3.54,
+        "score": 6.17
+      },
+      "params": {},
+      "default_params": {}
+    },
+    "multi_trend": {
+      "performance": {
+        "total_trades": 55,
+        "win_rate": 30.9,
+        "avg_return": 4.95,
+        "max_return": 66.23,
+        "min_return": -14.64,
+        "avg_hold_days": 9.1,
+        "total_return": 272.15,
+        "profit_factor": 2.94,
+        "score": 4.5
+      },
+      "params": {},
+      "default_params": {}
+    },
+    "composite": {
+      "performance": {
+        "total_trades": 36,
+        "win_rate": 33.3,
+        "avg_return": 3.4,
+        "max_return": 56.65,
+        "min_return": -12.44,
+        "avg_hold_days": 11.1,
+        "total_return": 122.39,
+        "profit_factor": 1.8,
+        "score": 2.04
+      },
+      "params": {
+        "buy_threshold": 5.0,
+        "weights": {
+          "ma": 1.0,
+          "rsi": 1.0,
+          "macd": 1.0,
+          "bb": 1.0
+        }
+      },
+      "default_params": {
+        "buy_threshold": 4.0,
+        "weights": {
+          "ma": 1.0,
+          "rsi": 1.0,
+          "macd": 1.0,
+          "bb": 1.0
+        }
+      }
+    }
+  },
+  "strategy_weights": {
+    "rsi_oversold": 0.3067,
+    "golden_cross": 0.2354,
+    "bollinger_lower": 0.1703,
+    "multi_trend": 0.1242,
+    "macd_cross": 0.1071,
+    "composite": 0.0563
+  }
+}

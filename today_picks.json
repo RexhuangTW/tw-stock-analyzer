@@ -1,0 +1,91 @@
+{
+  "date": "2026-03-18",
+  "timestamp": "2026-03-18 18:41:41",
+  "total_analyzed": 34,
+  "failed": [],
+  "buys": [],
+  "watches": [
+    {
+      "stock_id": "2308",
+      "close": 1465.0,
+      "change_pct": 1.74,
+      "rsi": 52.1,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 4.26
+    },
+    {
+      "stock_id": "2412",
+      "close": 137.5,
+      "change_pct": 0.36,
+      "rsi": 55.2,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 0.04
+    },
+    {
+      "stock_id": "8046",
+      "close": 567.0,
+      "change_pct": 4.23,
+      "rsi": 51.9,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 3.74
+    },
+    {
+      "stock_id": "2486",
+      "close": 163.0,
+      "change_pct": 0.31,
+      "rsi": 62.7,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 1.59
+    },
+    {
+      "stock_id": "2344",
+      "close": 128.0,
+      "change_pct": 3.64,
+      "rsi": 56.0,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 1.11
+    },
+    {
+      "stock_id": "4919",
+      "close": 90.4000015258789,
+      "change_pct": 9.98,
+      "rsi": 69.8,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 0.47
+    },
+    {
+      "stock_id": "6415",
+      "close": 289.5,
+      "change_pct": 5.46,
+      "rsi": 53.0,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 1.26
+    },
+    {
+      "stock_id": "3189",
+      "close": 365.5,
+      "change_pct": 7.03,
+      "rsi": 60.0,
+      "ma_trend": "多頭",
+      "score": 56.2,
+      "macd_hist": 3.27
+    }
+  ],
+  "avoids": [
+    {
+      "stock_id": "2317",
+      "score": 32.2
+    },
+    {
+      "stock_id": "2454",
+      "score": 25.7
+    }
+  ]
+}

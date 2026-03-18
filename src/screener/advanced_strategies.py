@@ -181,13 +181,15 @@ def screen_obv_divergence(stock_ids: List[str], lookback_days: int = 30) -> pd.D
 
 
 def screen_multi_factor(stock_ids: List[str],
-                        weights: dict = None) -> pd.DataFrame:
+                        weights: dict = None,
+                        min_score: float = 0) -> pd.DataFrame:
     """
     多因子選股：綜合技術面評分
     
     Args:
         stock_ids: 股票代號清單
         weights: 各因子權重,預設均等
+        min_score: 最低分數門檻 (0-100)
     
     Returns:
         帶評分的股票 DataFrame
@@ -283,6 +285,10 @@ def screen_multi_factor(stock_ids: List[str],
             continue
     
     df_result = pd.DataFrame(results)
+    
+    # 篩選分數達標的股票
+    if not df_result.empty and min_score > 0:
+        df_result = df_result[df_result['total_score'] >= min_score]
     
     # 按評分排序
     if not df_result.empty:
