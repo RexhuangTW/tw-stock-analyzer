@@ -40,13 +40,21 @@ def run():
                    'multi_trend': 0.13, 'macd_cross': 0.11, 'composite': 0.09}
         log("無回測資料，使用預設權重")
     
-    # 股票池
-    stocks = [
-        '2330','2317','2454','2308','2412','2881','2882','2886','2891',
-        '8046','2486','3189','3037','2337','2344','2603','1301','2002',
-        '2303','2357','2382','3008','5880','2474','2912','6505',
-        '3443','6669','4919','6415','2345','3231','1216','2327'
-    ]
+    # 載入完整股票池
+    universe_file = Path(__file__).parent / "stock_universe.json"
+    if universe_file.exists():
+        with open(universe_file) as f:
+            universe = json.load(f)
+        twse_stocks = universe.get('twse', [])
+        tpex_stocks = universe.get('tpex', [])
+        stocks = twse_stocks + tpex_stocks
+        log(f"股票池: 上市 {len(twse_stocks)} + 上櫃 {len(tpex_stocks)} = {len(stocks)} 檔")
+    else:
+        stocks = [
+            '2330','2317','2454','2308','2412','2881','2882','2886','2891',
+            '8046','2486','3189','3037','2337','2344','2603','1301','2002',
+        ]
+        log(f"股票池: 預設 {len(stocks)} 檔 (無 stock_universe.json)")
     
     yf = YahooFetcher()
     results = []
@@ -54,7 +62,12 @@ def run():
     
     for sid in stocks:
         try:
-            symbol = f"{sid}.TW"
+            # 上市 .TW, 上櫃 .TWO
+            if universe_file.exists():
+                suffix = '.TWO' if sid in tpex_stocks else '.TW'
+            else:
+                suffix = '.TW'
+            symbol = f"{sid}{suffix}"
             df = yf.get_stock_data(symbol, period='3mo')
             if df.empty or len(df) < 20:
                 failed.append(sid)
