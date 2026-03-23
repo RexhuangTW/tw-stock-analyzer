@@ -219,6 +219,25 @@ def run():
         json.dump(output, f, indent=2, ensure_ascii=False)
     
     log(f"\n結果儲存: {RESULT_FILE}")
+    
+    # 第二階段: DCF 基本面分析 (只分析觀察名單)
+    if buys or watches:
+        log(f"\n--- DCF 基本面分析 ---")
+        try:
+            from dcf_analysis import analyze_watchlist
+            dcf_targets = buys + watches[:8]
+            dcf_results = analyze_watchlist(dcf_targets)
+            
+            if dcf_results:
+                for r in dcf_results:
+                    iv = f"{r['intrinsic_value']:.0f}" if r['intrinsic_value'] else "N/A"
+                    sm = f"{r['safety_margin']:+.1f}%" if r['safety_margin'] is not None else "N/A"
+                    log(f"  {r['stock_id']} {r['name'][:8]}: 綜合{r['combined_score']:.0f} 內在{iv} 邊際{sm} {r['recommendation']}")
+                
+                output['dcf_results'] = dcf_results
+        except Exception as e:
+            log(f"  DCF 分析失敗: {e}")
+    
     log(f"=== 盤前選股完成 ===")
     
     return output
