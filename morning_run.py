@@ -238,6 +238,17 @@ def run():
         except Exception as e:
             log(f"  DCF 分析失敗: {e}")
     
+    # 用 Ollama 生成選股摘要 (省 token)
+    try:
+        from token_stats import query_ollama
+        summary_prompt = f"用繁體中文簡短總結今日選股：分析{len(results)}檔，買進候選{len(buys)}檔，觀察{len(watches)}檔。觀察名單前3名：{', '.join(s['stock_id'] for s in watches[:3])}。用3行以內回答。"
+        ollama_result = query_ollama(summary_prompt)
+        if 'response' in ollama_result:
+            log(f"\n[Ollama 摘要] {ollama_result['response'][:200]}")
+            log(f"[省 token: {ollama_result['total_tokens']}]")
+    except Exception as e:
+        log(f"Ollama 摘要失敗: {e}")
+    
     log(f"=== 盤前選股完成 ===")
     
     return output
