@@ -47,8 +47,8 @@ def run():
             universe = json.load(f)
         twse_stocks = universe.get('twse', [])
         tpex_stocks = universe.get('tpex', [])
-        stocks = twse_stocks + tpex_stocks
-        log(f"股票池: 上市 {len(twse_stocks)} + 上櫃 {len(tpex_stocks)} = {len(stocks)} 檔")
+        stocks = twse_stocks  # 只掃上市，排除上櫃
+        log(f"股票池: 上市 {len(twse_stocks)} 檔 (上櫃 {len(tpex_stocks)} 檔已排除)")
     else:
         stocks = [
             '2330','2317','2454','2308','2412','2881','2882','2886','2891',
@@ -63,10 +63,7 @@ def run():
     for sid in stocks:
         try:
             # 上市 .TW, 上櫃 .TWO
-            if universe_file.exists():
-                suffix = '.TWO' if sid in tpex_stocks else '.TW'
-            else:
-                suffix = '.TW'
+            suffix = '.TW'  # 只有上市股
             symbol = f"{sid}{suffix}"
             df = yf.get_stock_data(symbol, period='3mo')
             if df.empty or len(df) < 20:
