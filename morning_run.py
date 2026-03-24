@@ -235,6 +235,14 @@ def run():
         except Exception as e:
             log(f"  DCF 分析失敗: {e}")
     
+    # 生成分析報告
+    try:
+        from report_generator import generate_report
+        report = generate_report()
+        log(f"\n分析報告已生成: daily_report.md")
+    except Exception as e:
+        log(f"報告生成失敗: {e}")
+    
     # 用 Ollama 生成選股摘要 (省 token)
     try:
         from token_stats import query_ollama

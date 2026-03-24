@@ -1,102 +1,86 @@
 {
   "date": "2026-03-24",
-  "timestamp": "2026-03-24 08:43:40",
-  "total_analyzed": 1959,
+  "timestamp": "2026-03-24 13:10:08",
+  "total_analyzed": 1080,
   "failed": [],
   "buys": [],
   "watches": [
     {
-      "stock_id": "1213",
-      "close": 9.970000267028809,
-      "change_pct": -0.1,
-      "rsi": 49.8,
-      "ma_trend": "多頭",
-      "score": 63.0,
-      "macd_hist": 0.04
-    },
-    {
-      "stock_id": "1307",
-      "close": 34.95000076293945,
-      "change_pct": 2.04,
-      "rsi": 49.3,
-      "ma_trend": "多頭",
-      "score": 63.0,
-      "macd_hist": 0.04
-    },
-    {
-      "stock_id": "1460",
-      "close": 7.099999904632568,
-      "change_pct": 1.0,
-      "rsi": 48.3,
-      "ma_trend": "多頭",
-      "score": 63.0,
-      "macd_hist": 0.02
-    },
-    {
-      "stock_id": "2020",
-      "close": 24.299999237060547,
-      "change_pct": 0.41,
-      "rsi": 48.1,
-      "ma_trend": "多頭",
-      "score": 63.0,
-      "macd_hist": 0.01
-    },
-    {
       "stock_id": "3168",
-      "close": 41.29999923706055,
-      "change_pct": 0.61,
-      "rsi": 38.2,
+      "close": 41.150001525878906,
+      "change_pct": -0.36,
+      "rsi": 44.6,
       "ma_trend": "多頭",
-      "score": 63.0,
-      "macd_hist": 0.04
-    },
-    {
-      "stock_id": "5533",
-      "close": 14.350000381469727,
-      "change_pct": -0.69,
-      "rsi": 43.8,
-      "ma_trend": "多頭",
-      "score": 63.0,
-      "macd_hist": 0.01
-    },
-    {
-      "stock_id": "4995",
-      "close": 41.20000076293945,
-      "change_pct": -0.24,
-      "rsi": 47.3,
-      "ma_trend": "多頭",
-      "score": 63.0,
+      "score": 60.8,
       "macd_hist": 0.03
     },
     {
-      "stock_id": "6840",
-      "close": 63.400001525878906,
-      "change_pct": 1.44,
-      "rsi": 49.8,
+      "stock_id": "1713",
+      "close": 48.20000076293945,
+      "change_pct": 0.31,
+      "rsi": 67.6,
       "ma_trend": "多頭",
-      "score": 63.0,
-      "macd_hist": 0.44
+      "score": 59.8,
+      "macd_hist": 0.23
+    },
+    {
+      "stock_id": "1805",
+      "close": 11.600000381469727,
+      "change_pct": -3.33,
+      "rsi": 59.7,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 0.17
+    },
+    {
+      "stock_id": "1905",
+      "close": 12.350000381469727,
+      "change_pct": -1.2,
+      "rsi": 62.9,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 0.06
+    },
+    {
+      "stock_id": "2007",
+      "close": 8.489999771118164,
+      "change_pct": -3.85,
+      "rsi": 60.2,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 0.06
+    },
+    {
+      "stock_id": "2014",
+      "close": 18.600000381469727,
+      "change_pct": 2.48,
+      "rsi": 62.1,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 0.09
+    },
+    {
+      "stock_id": "2025",
+      "close": 11.800000190734863,
+      "change_pct": -7.45,
+      "rsi": 56.1,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 0.14
+    },
+    {
+      "stock_id": "2028",
+      "close": 18.850000381469727,
+      "change_pct": -1.05,
+      "rsi": 58.3,
+      "ma_trend": "多頭",
+      "score": 59.8,
+      "macd_hist": 0.13
     }
   ],
   "avoids": [
     {
-      "stock_id": "4557",
-      "score": 39.0
-    },
-    {
-      "stock_id": "6541",
-      "score": 39.0
-    },
-    {
-      "stock_id": "6757",
-      "score": 39.0
-    },
-    {
-      "stock_id": "6887",
-      "score": 39.0
-    },
-    {
-      "stock_id": "6962",
+      "stock_id": "6863",
       "score": 39.0
     },
     {
@@ -108,27 +92,15 @@
       "score": 39.0
     },
     {
-      "stock_id": "9940",
-      "score": 39.0
+      "stock_id": "0051",
+      "score": 37.7
     },
     {
-      "stock_id": "3272",
-      "score": 39.0
+      "stock_id": "1217",
+      "score": 37.7
     },
     {
-      "stock_id": "4116",
-      "score": 39.0
-    },
-    {
-      "stock_id": "6144",
-      "score": 39.0
-    },
-    {
-      "stock_id": "6904",
-      "score": 38.9
-    },
-    {
-      "stock_id": "1463",
+      "stock_id": "1516",
       "score": 37.7
     },
     {
@@ -136,11 +108,63 @@
       "score": 37.7
     },
     {
+      "stock_id": "1582",
+      "score": 37.7
+    },
+    {
+      "stock_id": "1707",
+      "score": 37.7
+    },
+    {
+      "stock_id": "1731",
+      "score": 37.7
+    },
+    {
+      "stock_id": "1817",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2002",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2027",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2069",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2102",
+      "score": 37.7
+    },
+    {
       "stock_id": "2103",
       "score": 37.7
     },
     {
-      "stock_id": "2395",
+      "stock_id": "2107",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2211",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2353",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2355",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2419",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2449",
       "score": 37.7
     },
     {
@@ -148,11 +172,31 @@
       "score": 37.7
     },
     {
-      "stock_id": "2601",
+      "stock_id": "2488",
       "score": 37.7
     },
     {
-      "stock_id": "2727",
+      "stock_id": "2520",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2534",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2614",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2885",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2891",
+      "score": 37.7
+    },
+    {
+      "stock_id": "2903",
       "score": 37.7
     },
     {
@@ -164,7 +208,11 @@
       "score": 37.7
     },
     {
-      "stock_id": "3030",
+      "stock_id": "3037",
+      "score": 37.7
+    },
+    {
+      "stock_id": "3038",
       "score": 37.7
     },
     {
@@ -172,7 +220,31 @@
       "score": 37.7
     },
     {
-      "stock_id": "4119",
+      "stock_id": "3231",
+      "score": 37.7
+    },
+    {
+      "stock_id": "3380",
+      "score": 37.7
+    },
+    {
+      "stock_id": "3413",
+      "score": 37.7
+    },
+    {
+      "stock_id": "3543",
+      "score": 37.7
+    },
+    {
+      "stock_id": "3679",
+      "score": 37.7
+    },
+    {
+      "stock_id": "3706",
+      "score": 37.7
+    },
+    {
+      "stock_id": "4755",
       "score": 37.7
     },
     {
@@ -180,7 +252,39 @@
       "score": 37.7
     },
     {
-      "stock_id": "6581",
+      "stock_id": "4989",
+      "score": 37.7
+    },
+    {
+      "stock_id": "5215",
+      "score": 37.7
+    },
+    {
+      "stock_id": "6112",
+      "score": 37.7
+    },
+    {
+      "stock_id": "6166",
+      "score": 37.7
+    },
+    {
+      "stock_id": "6183",
+      "score": 37.7
+    },
+    {
+      "stock_id": "6213",
+      "score": 37.7
+    },
+    {
+      "stock_id": "6285",
+      "score": 37.7
+    },
+    {
+      "stock_id": "6525",
+      "score": 37.7
+    },
+    {
+      "stock_id": "6770",
       "score": 37.7
     },
     {
@@ -192,6 +296,10 @@
       "score": 37.7
     },
     {
+      "stock_id": "6988",
+      "score": 37.7
+    },
+    {
       "stock_id": "7740",
       "score": 37.7
     },
@@ -200,159 +308,31 @@
       "score": 37.7
     },
     {
+      "stock_id": "8016",
+      "score": 37.7
+    },
+    {
+      "stock_id": "8021",
+      "score": 37.7
+    },
+    {
+      "stock_id": "8046",
+      "score": 37.7
+    },
+    {
+      "stock_id": "8996",
+      "score": 37.7
+    },
+    {
       "stock_id": "9905",
       "score": 37.7
     },
     {
-      "stock_id": "1294",
+      "stock_id": "9931",
       "score": 37.7
     },
     {
-      "stock_id": "1788",
-      "score": 37.7
-    },
-    {
-      "stock_id": "1813",
-      "score": 37.7
-    },
-    {
-      "stock_id": "2755",
-      "score": 37.7
-    },
-    {
-      "stock_id": "3252",
-      "score": 37.7
-    },
-    {
-      "stock_id": "3264",
-      "score": 37.7
-    },
-    {
-      "stock_id": "4413",
-      "score": 37.7
-    },
-    {
-      "stock_id": "4529",
-      "score": 37.7
-    },
-    {
-      "stock_id": "4728",
-      "score": 37.7
-    },
-    {
-      "stock_id": "5410",
-      "score": 37.7
-    },
-    {
-      "stock_id": "5475",
-      "score": 37.7
-    },
-    {
-      "stock_id": "6016",
-      "score": 37.7
-    },
-    {
-      "stock_id": "6146",
-      "score": 37.7
-    },
-    {
-      "stock_id": "6859",
-      "score": 37.7
-    },
-    {
-      "stock_id": "6996",
-      "score": 37.7
-    },
-    {
-      "stock_id": "8024",
-      "score": 37.7
-    },
-    {
-      "stock_id": "8908",
-      "score": 37.7
-    },
-    {
-      "stock_id": "8917",
-      "score": 37.7
-    },
-    {
-      "stock_id": "9950",
-      "score": 37.7
-    },
-    {
-      "stock_id": "1474",
-      "score": 36.8
-    },
-    {
-      "stock_id": "1475",
-      "score": 36.8
-    },
-    {
-      "stock_id": "2429",
-      "score": 36.8
-    },
-    {
-      "stock_id": "3055",
-      "score": 36.8
-    },
-    {
-      "stock_id": "3257",
-      "score": 36.8
-    },
-    {
-      "stock_id": "4968",
-      "score": 36.8
-    },
-    {
-      "stock_id": "6283",
-      "score": 36.8
-    },
-    {
-      "stock_id": "6558",
-      "score": 36.8
-    },
-    {
-      "stock_id": "8454",
-      "score": 36.8
-    },
-    {
-      "stock_id": "8499",
-      "score": 36.8
-    },
-    {
-      "stock_id": "1295",
-      "score": 36.8
-    },
-    {
-      "stock_id": "1586",
-      "score": 36.8
-    },
-    {
-      "stock_id": "3083",
-      "score": 36.8
-    },
-    {
-      "stock_id": "3564",
-      "score": 36.8
-    },
-    {
-      "stock_id": "5321",
-      "score": 36.8
-    },
-    {
-      "stock_id": "6204",
-      "score": 36.8
-    },
-    {
-      "stock_id": "6242",
-      "score": 36.8
-    },
-    {
-      "stock_id": "6425",
-      "score": 36.8
-    },
-    {
-      "stock_id": "7584",
+      "stock_id": "4557",
       "score": 36.8
     },
     {
@@ -360,7 +340,7 @@
       "score": 36.6
     },
     {
-      "stock_id": "1256",
+      "stock_id": "1416",
       "score": 36.6
     },
     {
@@ -368,79 +348,35 @@
       "score": 36.6
     },
     {
-      "stock_id": "1464",
-      "score": 36.6
-    },
-    {
       "stock_id": "1722",
       "score": 36.6
     },
     {
-      "stock_id": "2547",
+      "stock_id": "2385",
       "score": 36.6
     },
     {
-      "stock_id": "6669",
+      "stock_id": "2478",
       "score": 36.6
     },
     {
-      "stock_id": "9939",
+      "stock_id": "2489",
       "score": 36.6
     },
     {
-      "stock_id": "2061",
+      "stock_id": "3130",
       "score": 36.6
     },
     {
-      "stock_id": "2926",
+      "stock_id": "3596",
       "score": 36.6
     },
     {
-      "stock_id": "4147",
+      "stock_id": "8045",
       "score": 36.6
     },
     {
-      "stock_id": "4417",
-      "score": 36.6
-    },
-    {
-      "stock_id": "4726",
-      "score": 36.6
-    },
-    {
-      "stock_id": "4772",
-      "score": 36.6
-    },
-    {
-      "stock_id": "5263",
-      "score": 36.6
-    },
-    {
-      "stock_id": "5355",
-      "score": 36.6
-    },
-    {
-      "stock_id": "5432",
-      "score": 36.6
-    },
-    {
-      "stock_id": "5601",
-      "score": 36.6
-    },
-    {
-      "stock_id": "6971",
-      "score": 36.6
-    },
-    {
-      "stock_id": "8092",
-      "score": 36.6
-    },
-    {
-      "stock_id": "8390",
-      "score": 36.6
-    },
-    {
-      "stock_id": "8924",
+      "stock_id": "9955",
       "score": 36.6
     },
     {
@@ -448,43 +384,27 @@
       "score": 32.5
     },
     {
-      "stock_id": "1452",
-      "score": 32.5
-    },
-    {
       "stock_id": "1589",
       "score": 32.5
     },
     {
-      "stock_id": "1623",
+      "stock_id": "2228",
       "score": 32.5
     },
     {
-      "stock_id": "2528",
+      "stock_id": "3557",
       "score": 32.5
     },
     {
-      "stock_id": "2610",
+      "stock_id": "4545",
       "score": 32.5
     },
     {
-      "stock_id": "2618",
+      "stock_id": "4915",
       "score": 32.5
     },
     {
-      "stock_id": "3013",
-      "score": 32.5
-    },
-    {
-      "stock_id": "3032",
-      "score": 32.5
-    },
-    {
-      "stock_id": "3494",
-      "score": 32.5
-    },
-    {
-      "stock_id": "5203",
+      "stock_id": "4968",
       "score": 32.5
     },
     {
@@ -492,115 +412,71 @@
       "score": 32.5
     },
     {
-      "stock_id": "6573",
+      "stock_id": "5288",
       "score": 32.5
     },
     {
-      "stock_id": "6931",
+      "stock_id": "6235",
       "score": 32.5
     },
     {
-      "stock_id": "8210",
+      "stock_id": "6541",
       "score": 32.5
     },
     {
-      "stock_id": "2726",
+      "stock_id": "6838",
       "score": 32.5
     },
     {
-      "stock_id": "2734",
+      "stock_id": "6962",
       "score": 32.5
     },
     {
-      "stock_id": "2743",
+      "stock_id": "8454",
       "score": 32.5
     },
     {
-      "stock_id": "3379",
+      "stock_id": "9906",
       "score": 32.5
     },
     {
-      "stock_id": "3511",
+      "stock_id": "9914",
       "score": 32.5
     },
     {
-      "stock_id": "3541",
+      "stock_id": "9919",
       "score": 32.5
     },
     {
-      "stock_id": "3625",
+      "stock_id": "9921",
       "score": 32.5
     },
     {
-      "stock_id": "4157",
+      "stock_id": "9940",
       "score": 32.5
     },
     {
-      "stock_id": "4174",
-      "score": 32.5
-    },
-    {
-      "stock_id": "4401",
-      "score": 32.5
-    },
-    {
-      "stock_id": "4432",
-      "score": 32.5
-    },
-    {
-      "stock_id": "5211",
-      "score": 32.5
-    },
-    {
-      "stock_id": "6474",
-      "score": 32.5
-    },
-    {
-      "stock_id": "6496",
-      "score": 32.5
-    },
-    {
-      "stock_id": "6712",
-      "score": 32.5
-    },
-    {
-      "stock_id": "6865",
-      "score": 32.5
-    },
-    {
-      "stock_id": "6982",
-      "score": 32.5
-    },
-    {
-      "stock_id": "0055",
+      "stock_id": "1101",
       "score": 32.2
     },
     {
-      "stock_id": "1109",
+      "stock_id": "1203",
       "score": 32.2
     },
     {
-      "stock_id": "1215",
+      "stock_id": "1233",
       "score": 32.2
     },
     {
-      "stock_id": "1234",
+      "stock_id": "1319",
       "score": 32.2
     },
     {
-      "stock_id": "1236",
+      "stock_id": "1342",
       "score": 32.2
     },
     {
-      "stock_id": "1410",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1413",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1419",
+      "stock_id": "1402",
       "score": 32.2
     },
     {
@@ -608,19 +484,11 @@
       "score": 32.2
     },
     {
-      "stock_id": "1445",
+      "stock_id": "1438",
       "score": 32.2
     },
     {
-      "stock_id": "1451",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1459",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1467",
+      "stock_id": "1465",
       "score": 32.2
     },
     {
@@ -628,15 +496,11 @@
       "score": 32.2
     },
     {
+      "stock_id": "1477",
+      "score": 32.2
+    },
+    {
       "stock_id": "1504",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1515",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1521",
       "score": 32.2
     },
     {
@@ -648,7 +512,7 @@
       "score": 32.2
     },
     {
-      "stock_id": "1536",
+      "stock_id": "1563",
       "score": 32.2
     },
     {
@@ -656,35 +520,27 @@
       "score": 32.2
     },
     {
+      "stock_id": "1587",
+      "score": 32.2
+    },
+    {
+      "stock_id": "1590",
+      "score": 32.2
+    },
+    {
       "stock_id": "1603",
       "score": 32.2
     },
     {
-      "stock_id": "1605",
+      "stock_id": "1614",
       "score": 32.2
     },
     {
-      "stock_id": "1608",
+      "stock_id": "1626",
       "score": 32.2
     },
     {
-      "stock_id": "1616",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1618",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1786",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1806",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1810",
+      "stock_id": "1795",
       "score": 32.2
     },
     {
@@ -696,43 +552,11 @@
       "score": 32.2
     },
     {
-      "stock_id": "2024",
+      "stock_id": "2106",
       "score": 32.2
     },
     {
-      "stock_id": "2029",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2049",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2062",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2102",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2201",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2204",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2207",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2208",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2303",
+      "stock_id": "2239",
       "score": 32.2
     },
     {
@@ -744,59 +568,11 @@
       "score": 32.2
     },
     {
-      "stock_id": "2331",
+      "stock_id": "2433",
       "score": 32.2
     },
     {
-      "stock_id": "2354",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2371",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2375",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2412",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2427",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2428",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2431",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2440",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2450",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2454",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2457",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2462",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2483",
+      "stock_id": "2514",
       "score": 32.2
     },
     {
@@ -804,7 +580,7 @@
       "score": 32.2
     },
     {
-      "stock_id": "2536",
+      "stock_id": "2546",
       "score": 32.2
     },
     {
@@ -812,11 +588,19 @@
       "score": 32.2
     },
     {
-      "stock_id": "2611",
+      "stock_id": "2606",
       "score": 32.2
     },
     {
-      "stock_id": "2633",
+      "stock_id": "2607",
+      "score": 32.2
+    },
+    {
+      "stock_id": "2613",
+      "score": 32.2
+    },
+    {
+      "stock_id": "2615",
       "score": 32.2
     },
     {
@@ -824,7 +608,7 @@
       "score": 32.2
     },
     {
-      "stock_id": "2637",
+      "stock_id": "2642",
       "score": 32.2
     },
     {
@@ -832,27 +616,7 @@
       "score": 32.2
     },
     {
-      "stock_id": "2646",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2701",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2702",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2706",
-      "score": 32.2
-    },
-    {
       "stock_id": "2722",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2801",
       "score": 32.2
     },
     {
@@ -860,39 +624,11 @@
       "score": 32.2
     },
     {
-      "stock_id": "2836",
+      "stock_id": "2867",
       "score": 32.2
     },
     {
-      "stock_id": "2845",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2849",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2852",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2881",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2882",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2885",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2886",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2890",
+      "stock_id": "2905",
       "score": 32.2
     },
     {
@@ -900,15 +636,11 @@
       "score": 32.2
     },
     {
-      "stock_id": "2913",
+      "stock_id": "3018",
       "score": 32.2
     },
     {
-      "stock_id": "3015",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3019",
+      "stock_id": "3027",
       "score": 32.2
     },
     {
@@ -916,63 +648,23 @@
       "score": 32.2
     },
     {
-      "stock_id": "3062",
+      "stock_id": "3056",
       "score": 32.2
     },
     {
-      "stock_id": "3138",
+      "stock_id": "3092",
       "score": 32.2
     },
     {
-      "stock_id": "3296",
+      "stock_id": "3149",
       "score": 32.2
     },
     {
-      "stock_id": "3450",
+      "stock_id": "3545",
       "score": 32.2
     },
     {
-      "stock_id": "3501",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3504",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3528",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3557",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3686",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3716",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4104",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4108",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4133",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4137",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4426",
+      "stock_id": "3705",
       "score": 32.2
     },
     {
@@ -980,27 +672,7 @@
       "score": 32.2
     },
     {
-      "stock_id": "4540",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4562",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4571",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4581",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4585",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4588",
+      "stock_id": "4552",
       "score": 32.2
     },
     {
@@ -1008,35 +680,11 @@
       "score": 32.2
     },
     {
-      "stock_id": "4935",
+      "stock_id": "5607",
       "score": 32.2
     },
     {
-      "stock_id": "5222",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5283",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5469",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5608",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6005",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6176",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6191",
+      "stock_id": "6133",
       "score": 32.2
     },
     {
@@ -1044,59 +692,11 @@
       "score": 32.2
     },
     {
-      "stock_id": "6216",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6224",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6239",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6243",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6271",
-      "score": 32.2
-    },
-    {
       "stock_id": "6272",
       "score": 32.2
     },
     {
-      "stock_id": "6405",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6409",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6431",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6442",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6446",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6464",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6668",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6719",
+      "stock_id": "6671",
       "score": 32.2
     },
     {
@@ -1104,11 +704,7 @@
       "score": 32.2
     },
     {
-      "stock_id": "6792",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6835",
+      "stock_id": "6806",
       "score": 32.2
     },
     {
@@ -1116,7 +712,11 @@
       "score": 32.2
     },
     {
-      "stock_id": "6906",
+      "stock_id": "6901",
+      "score": 32.2
+    },
+    {
+      "stock_id": "6923",
       "score": 32.2
     },
     {
@@ -1124,11 +724,15 @@
       "score": 32.2
     },
     {
+      "stock_id": "6936",
+      "score": 32.2
+    },
+    {
       "stock_id": "6949",
       "score": 32.2
     },
     {
-      "stock_id": "6994",
+      "stock_id": "6952",
       "score": 32.2
     },
     {
@@ -1136,31 +740,7 @@
       "score": 32.2
     },
     {
-      "stock_id": "7721",
-      "score": 32.2
-    },
-    {
-      "stock_id": "7736",
-      "score": 32.2
-    },
-    {
-      "stock_id": "7788",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8072",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8103",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8162",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8163",
+      "stock_id": "7799",
       "score": 32.2
     },
     {
@@ -1168,387 +748,19 @@
       "score": 32.2
     },
     {
-      "stock_id": "8249",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8374",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8422",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8429",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8467",
-      "score": 32.2
-    },
-    {
       "stock_id": "8482",
       "score": 32.2
     },
     {
-      "stock_id": "8487",
+      "stock_id": "9902",
       "score": 32.2
     },
     {
-      "stock_id": "8488",
+      "stock_id": "9938",
       "score": 32.2
     },
     {
-      "stock_id": "8940",
-      "score": 32.2
-    },
-    {
-      "stock_id": "9904",
-      "score": 32.2
-    },
-    {
-      "stock_id": "9910",
-      "score": 32.2
-    },
-    {
-      "stock_id": "9930",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1781",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2035",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2719",
-      "score": 32.2
-    },
-    {
-      "stock_id": "2947",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3178",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3207",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3290",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3322",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3325",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3362",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3483",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3491",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3558",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3611",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3623",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3624",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3630",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3691",
-      "score": 32.2
-    },
-    {
-      "stock_id": "3713",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4131",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4160",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4161",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4162",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4168",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4173",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4207",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4430",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4541",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4561",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4714",
-      "score": 32.2
-    },
-    {
-      "stock_id": "4729",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5245",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5310",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5314",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5371",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5381",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5392",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5465",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5516",
-      "score": 32.2
-    },
-    {
-      "stock_id": "5905",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6124",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6134",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6140",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6210",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6220",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6244",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6411",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6462",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6469",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6486",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6535",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6560",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6576",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6593",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6609",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6651",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6708",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6716",
-      "score": 32.2
-    },
-    {
-      "stock_id": "6733",
-      "score": 32.2
-    },
-    {
-      "stock_id": "7642",
-      "score": 32.2
-    },
-    {
-      "stock_id": "7715",
-      "score": 32.2
-    },
-    {
-      "stock_id": "7792",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8034",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8049",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8054",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8069",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8074",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8109",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8111",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8182",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8183",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8279",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8401",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8403",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8440",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8906",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8921",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8927",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8928",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8931",
-      "score": 32.2
-    },
-    {
-      "stock_id": "8935",
-      "score": 32.2
-    },
-    {
-      "stock_id": "1102",
-      "score": 30.3
-    },
-    {
-      "stock_id": "1103",
-      "score": 30.3
-    },
-    {
-      "stock_id": "1104",
+      "stock_id": "1324",
       "score": 30.3
     },
     {
@@ -1564,7 +776,19 @@
       "score": 30.3
     },
     {
-      "stock_id": "1506",
+      "stock_id": "1452",
+      "score": 30.3
+    },
+    {
+      "stock_id": "1474",
+      "score": 30.3
+    },
+    {
+      "stock_id": "1475",
+      "score": 30.3
+    },
+    {
+      "stock_id": "1528",
       "score": 30.3
     },
     {
@@ -1572,43 +796,19 @@
       "score": 30.3
     },
     {
-      "stock_id": "2250",
+      "stock_id": "1623",
       "score": 30.3
     },
     {
-      "stock_id": "2312",
+      "stock_id": "2314",
       "score": 30.3
     },
     {
-      "stock_id": "2352",
+      "stock_id": "2429",
       "score": 30.3
     },
     {
-      "stock_id": "2402",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2439",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2474",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2498",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2509",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2537",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2540",
+      "stock_id": "2506",
       "score": 30.3
     },
     {
@@ -1620,35 +820,19 @@
       "score": 30.3
     },
     {
-      "stock_id": "3035",
-      "score": 30.3
-    },
-    {
       "stock_id": "3047",
       "score": 30.3
     },
     {
-      "stock_id": "3059",
+      "stock_id": "3055",
       "score": 30.3
     },
     {
-      "stock_id": "3094",
+      "stock_id": "3257",
       "score": 30.3
     },
     {
-      "stock_id": "3515",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3652",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3661",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3694",
+      "stock_id": "3447",
       "score": 30.3
     },
     {
@@ -1660,23 +844,7 @@
       "score": 30.3
     },
     {
-      "stock_id": "4306",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4545",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4583",
-      "score": 30.3
-    },
-    {
       "stock_id": "4590",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4912",
       "score": 30.3
     },
     {
@@ -1684,23 +852,11 @@
       "score": 30.3
     },
     {
-      "stock_id": "5525",
+      "stock_id": "6472",
       "score": 30.3
     },
     {
-      "stock_id": "5876",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6196",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6235",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6277",
+      "stock_id": "6573",
       "score": 30.3
     },
     {
@@ -1716,27 +872,19 @@
       "score": 30.3
     },
     {
-      "stock_id": "6742",
-      "score": 30.3
-    },
-    {
       "stock_id": "6743",
       "score": 30.3
     },
     {
-      "stock_id": "6756",
+      "stock_id": "6768",
       "score": 30.3
     },
     {
-      "stock_id": "7631",
+      "stock_id": "6890",
       "score": 30.3
     },
     {
-      "stock_id": "8011",
-      "score": 30.3
-    },
-    {
-      "stock_id": "8478",
+      "stock_id": "6931",
       "score": 30.3
     },
     {
@@ -1744,263 +892,127 @@
       "score": 30.3
     },
     {
-      "stock_id": "9906",
-      "score": 30.3
-    },
-    {
-      "stock_id": "9927",
-      "score": 30.3
-    },
-    {
-      "stock_id": "9934",
-      "score": 30.3
-    },
-    {
-      "stock_id": "9958",
-      "score": 30.3
-    },
-    {
-      "stock_id": "1336",
-      "score": 30.3
-    },
-    {
-      "stock_id": "1580",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2230",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2235",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2718",
-      "score": 30.3
-    },
-    {
-      "stock_id": "2736",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3078",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3141",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3268",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3323",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3537",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3540",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3552",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3567",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3597",
-      "score": 30.3
-    },
-    {
-      "stock_id": "3685",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4109",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4716",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4745",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4924",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4931",
-      "score": 30.3
-    },
-    {
-      "stock_id": "4966",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5201",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5206",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5251",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5315",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5460",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5481",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5489",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5493",
-      "score": 30.3
-    },
-    {
-      "stock_id": "5704",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6104",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6114",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6118",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6143",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6161",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6171",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6185",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6186",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6237",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6418",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6517",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6569",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6603",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6684",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6751",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6785",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6844",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6846",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6895",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6910",
-      "score": 30.3
-    },
-    {
-      "stock_id": "8089",
-      "score": 30.3
-    },
-    {
-      "stock_id": "8121",
-      "score": 30.3
-    },
-    {
-      "stock_id": "8171",
-      "score": 30.3
-    },
-    {
-      "stock_id": "8272",
-      "score": 30.3
-    },
-    {
-      "stock_id": "8416",
-      "score": 30.3
-    },
-    {
-      "stock_id": "8489",
-      "score": 30.3
-    },
-    {
-      "stock_id": "6629",
+      "stock_id": "1103",
       "score": 29.3
     },
     {
-      "stock_id": "4126",
+      "stock_id": "1732",
+      "score": 29.3
+    },
+    {
+      "stock_id": "2374",
+      "score": 29.3
+    },
+    {
+      "stock_id": "2901",
+      "score": 29.3
+    },
+    {
+      "stock_id": "3013",
+      "score": 29.3
+    },
+    {
+      "stock_id": "4583",
+      "score": 29.3
+    },
+    {
+      "stock_id": "4912",
+      "score": 29.3
+    },
+    {
+      "stock_id": "5203",
+      "score": 29.3
+    },
+    {
+      "stock_id": "6552",
+      "score": 29.3
+    },
+    {
+      "stock_id": "8464",
+      "score": 29.3
+    },
+    {
+      "stock_id": "1506",
       "score": 27.0
     },
     {
-      "stock_id": "4192",
+      "stock_id": "2312",
       "score": 27.0
     },
     {
-      "stock_id": "6637",
+      "stock_id": "2356",
+      "score": 27.0
+    },
+    {
+      "stock_id": "2491",
+      "score": 27.0
+    },
+    {
+      "stock_id": "2509",
+      "score": 27.0
+    },
+    {
+      "stock_id": "3032",
+      "score": 27.0
+    },
+    {
+      "stock_id": "3041",
+      "score": 27.0
+    },
+    {
+      "stock_id": "3059",
+      "score": 27.0
+    },
+    {
+      "stock_id": "3094",
+      "score": 27.0
+    },
+    {
+      "stock_id": "3622",
+      "score": 27.0
+    },
+    {
+      "stock_id": "3661",
+      "score": 27.0
+    },
+    {
+      "stock_id": "4306",
+      "score": 27.0
+    },
+    {
+      "stock_id": "4942",
+      "score": 27.0
+    },
+    {
+      "stock_id": "6742",
+      "score": 27.0
+    },
+    {
+      "stock_id": "6756",
+      "score": 27.0
+    },
+    {
+      "stock_id": "7631",
+      "score": 27.0
+    },
+    {
+      "stock_id": "8011",
+      "score": 27.0
+    },
+    {
+      "stock_id": "8210",
+      "score": 27.0
+    },
+    {
+      "stock_id": "8478",
+      "score": 27.0
+    },
+    {
+      "stock_id": "9928",
+      "score": 27.0
+    },
+    {
+      "stock_id": "9934",
       "score": 27.0
     },
     {
@@ -2012,15 +1024,7 @@
       "score": 25.7
     },
     {
-      "stock_id": "0053",
-      "score": 25.7
-    },
-    {
-      "stock_id": "0056",
-      "score": 25.7
-    },
-    {
-      "stock_id": "0057",
+      "stock_id": "0055",
       "score": 25.7
     },
     {
@@ -2028,11 +1032,27 @@
       "score": 25.7
     },
     {
-      "stock_id": "1217",
+      "stock_id": "1109",
       "score": 25.7
     },
     {
-      "stock_id": "1232",
+      "stock_id": "1110",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1215",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1216",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1234",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1256",
       "score": 25.7
     },
     {
@@ -2041,10 +1061,6 @@
     },
     {
       "stock_id": "1303",
-      "score": 25.7
-    },
-    {
-      "stock_id": "1314",
       "score": 25.7
     },
     {
@@ -2060,11 +1076,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "1339",
+      "stock_id": "1326",
       "score": 25.7
     },
     {
-      "stock_id": "1340",
+      "stock_id": "1339",
       "score": 25.7
     },
     {
@@ -2072,7 +1088,35 @@
       "score": 25.7
     },
     {
+      "stock_id": "1445",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1451",
+      "score": 25.7
+    },
+    {
       "stock_id": "1454",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1459",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1463",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1464",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1466",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1467",
       "score": 25.7
     },
     {
@@ -2088,15 +1132,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "1513",
+      "stock_id": "1515",
       "score": 25.7
     },
     {
-      "stock_id": "1514",
-      "score": 25.7
-    },
-    {
-      "stock_id": "1516",
+      "stock_id": "1517",
       "score": 25.7
     },
     {
@@ -2104,7 +1144,7 @@
       "score": 25.7
     },
     {
-      "stock_id": "1524",
+      "stock_id": "1521",
       "score": 25.7
     },
     {
@@ -2112,7 +1152,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "1537",
+      "stock_id": "1532",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1536",
       "score": 25.7
     },
     {
@@ -2124,7 +1168,19 @@
       "score": 25.7
     },
     {
+      "stock_id": "1558",
+      "score": 25.7
+    },
+    {
       "stock_id": "1560",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1605",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1608",
       "score": 25.7
     },
     {
@@ -2132,7 +1188,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "1707",
+      "stock_id": "1618",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1714",
       "score": 25.7
     },
     {
@@ -2144,19 +1204,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "1731",
+      "stock_id": "1730",
       "score": 25.7
     },
     {
-      "stock_id": "1733",
-      "score": 25.7
-    },
-    {
-      "stock_id": "1736",
-      "score": 25.7
-    },
-    {
-      "stock_id": "1737",
+      "stock_id": "1752",
       "score": 25.7
     },
     {
@@ -2164,15 +1216,19 @@
       "score": 25.7
     },
     {
-      "stock_id": "1817",
+      "stock_id": "1786",
       "score": 25.7
     },
     {
-      "stock_id": "2002",
+      "stock_id": "1802",
       "score": 25.7
     },
     {
-      "stock_id": "2006",
+      "stock_id": "1806",
+      "score": 25.7
+    },
+    {
+      "stock_id": "1810",
       "score": 25.7
     },
     {
@@ -2180,19 +1236,15 @@
       "score": 25.7
     },
     {
-      "stock_id": "2023",
+      "stock_id": "2029",
       "score": 25.7
     },
     {
-      "stock_id": "2069",
+      "stock_id": "2033",
       "score": 25.7
     },
     {
-      "stock_id": "2104",
-      "score": 25.7
-    },
-    {
-      "stock_id": "2107",
+      "stock_id": "2062",
       "score": 25.7
     },
     {
@@ -2200,15 +1252,35 @@
       "score": 25.7
     },
     {
-      "stock_id": "2211",
+      "stock_id": "2204",
       "score": 25.7
     },
     {
-      "stock_id": "2228",
+      "stock_id": "2207",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2208",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2236",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2250",
       "score": 25.7
     },
     {
       "stock_id": "2301",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2303",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2327",
       "score": 25.7
     },
     {
@@ -2220,7 +1292,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "2332",
+      "stock_id": "2331",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2354",
       "score": 25.7
     },
     {
@@ -2228,19 +1304,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "2362",
+      "stock_id": "2371",
       "score": 25.7
     },
     {
-      "stock_id": "2363",
-      "score": 25.7
-    },
-    {
-      "stock_id": "2365",
-      "score": 25.7
-    },
-    {
-      "stock_id": "2374",
+      "stock_id": "2375",
       "score": 25.7
     },
     {
@@ -2248,23 +1316,7 @@
       "score": 25.7
     },
     {
-      "stock_id": "2382",
-      "score": 25.7
-    },
-    {
-      "stock_id": "2385",
-      "score": 25.7
-    },
-    {
       "stock_id": "2392",
-      "score": 25.7
-    },
-    {
-      "stock_id": "2401",
-      "score": 25.7
-    },
-    {
-      "stock_id": "2404",
       "score": 25.7
     },
     {
@@ -2276,7 +1328,43 @@
       "score": 25.7
     },
     {
+      "stock_id": "2412",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2421",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2427",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2428",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2431",
+      "score": 25.7
+    },
+    {
       "stock_id": "2434",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2440",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2450",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2454",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2457",
       "score": 25.7
     },
     {
@@ -2288,11 +1376,15 @@
       "score": 25.7
     },
     {
+      "stock_id": "2462",
+      "score": 25.7
+    },
+    {
       "stock_id": "2480",
       "score": 25.7
     },
     {
-      "stock_id": "2484",
+      "stock_id": "2483",
       "score": 25.7
     },
     {
@@ -2300,15 +1392,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "2511",
-      "score": 25.7
-    },
-    {
       "stock_id": "2527",
       "score": 25.7
     },
     {
-      "stock_id": "2534",
+      "stock_id": "2536",
       "score": 25.7
     },
     {
@@ -2332,7 +1420,39 @@
       "score": 25.7
     },
     {
-      "stock_id": "2614",
+      "stock_id": "2547",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2601",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2608",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2611",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2617",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2633",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2637",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2701",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2702",
       "score": 25.7
     },
     {
@@ -2340,11 +1460,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "2707",
+      "stock_id": "2706",
       "score": 25.7
     },
     {
-      "stock_id": "2731",
+      "stock_id": "2707",
       "score": 25.7
     },
     {
@@ -2352,15 +1472,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "2753",
-      "score": 25.7
-    },
-    {
       "stock_id": "2762",
       "score": 25.7
     },
     {
-      "stock_id": "2812",
+      "stock_id": "2801",
       "score": 25.7
     },
     {
@@ -2368,7 +1484,31 @@
       "score": 25.7
     },
     {
-      "stock_id": "2850",
+      "stock_id": "2834",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2836",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2845",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2849",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2852",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2881",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2882",
       "score": 25.7
     },
     {
@@ -2376,11 +1516,19 @@
       "score": 25.7
     },
     {
-      "stock_id": "2887",
+      "stock_id": "2886",
       "score": 25.7
     },
     {
-      "stock_id": "2891",
+      "stock_id": "2892",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2912",
+      "score": 25.7
+    },
+    {
+      "stock_id": "2913",
       "score": 25.7
     },
     {
@@ -2396,15 +1544,27 @@
       "score": 25.7
     },
     {
+      "stock_id": "3008",
+      "score": 25.7
+    },
+    {
       "stock_id": "3014",
       "score": 25.7
     },
     {
-      "stock_id": "3018",
+      "stock_id": "3015",
       "score": 25.7
     },
     {
-      "stock_id": "3034",
+      "stock_id": "3019",
+      "score": 25.7
+    },
+    {
+      "stock_id": "3035",
+      "score": 25.7
+    },
+    {
+      "stock_id": "3043",
       "score": 25.7
     },
     {
@@ -2416,15 +1576,19 @@
       "score": 25.7
     },
     {
-      "stock_id": "3130",
+      "stock_id": "3062",
       "score": 25.7
     },
     {
-      "stock_id": "3231",
+      "stock_id": "3138",
       "score": 25.7
     },
     {
       "stock_id": "3266",
+      "score": 25.7
+    },
+    {
+      "stock_id": "3296",
       "score": 25.7
     },
     {
@@ -2440,11 +1604,23 @@
       "score": 25.7
     },
     {
-      "stock_id": "3413",
+      "stock_id": "3450",
       "score": 25.7
     },
     {
-      "stock_id": "3481",
+      "stock_id": "3494",
+      "score": 25.7
+    },
+    {
+      "stock_id": "3501",
+      "score": 25.7
+    },
+    {
+      "stock_id": "3504",
+      "score": 25.7
+    },
+    {
+      "stock_id": "3528",
       "score": 25.7
     },
     {
@@ -2456,10 +1632,6 @@
       "score": 25.7
     },
     {
-      "stock_id": "3596",
-      "score": 25.7
-    },
-    {
       "stock_id": "3605",
       "score": 25.7
     },
@@ -2468,7 +1640,19 @@
       "score": 25.7
     },
     {
-      "stock_id": "3711",
+      "stock_id": "3652",
+      "score": 25.7
+    },
+    {
+      "stock_id": "3686",
+      "score": 25.7
+    },
+    {
+      "stock_id": "3716",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4104",
       "score": 25.7
     },
     {
@@ -2476,7 +1660,43 @@
       "score": 25.7
     },
     {
+      "stock_id": "4108",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4133",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4137",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4426",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4540",
+      "score": 25.7
+    },
+    {
       "stock_id": "4560",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4562",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4564",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4569",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4571",
       "score": 25.7
     },
     {
@@ -2484,19 +1704,35 @@
       "score": 25.7
     },
     {
+      "stock_id": "4581",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4585",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4588",
+      "score": 25.7
+    },
+    {
       "stock_id": "4722",
       "score": 25.7
     },
     {
-      "stock_id": "4736",
+      "stock_id": "4927",
       "score": 25.7
     },
     {
-      "stock_id": "4770",
+      "stock_id": "4934",
       "score": 25.7
     },
     {
-      "stock_id": "4915",
+      "stock_id": "4935",
+      "score": 25.7
+    },
+    {
+      "stock_id": "4943",
       "score": 25.7
     },
     {
@@ -2504,15 +1740,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "4961",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4976",
-      "score": 25.7
-    },
-    {
       "stock_id": "4999",
+      "score": 25.7
+    },
+    {
+      "stock_id": "5222",
       "score": 25.7
     },
     {
@@ -2524,15 +1756,7 @@
       "score": 25.7
     },
     {
-      "stock_id": "5269",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5285",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5288",
+      "stock_id": "5283",
       "score": 25.7
     },
     {
@@ -2540,7 +1764,7 @@
       "score": 25.7
     },
     {
-      "stock_id": "5434",
+      "stock_id": "5469",
       "score": 25.7
     },
     {
@@ -2548,23 +1772,27 @@
       "score": 25.7
     },
     {
-      "stock_id": "6115",
+      "stock_id": "5531",
       "score": 25.7
     },
     {
-      "stock_id": "6116",
+      "stock_id": "5608",
       "score": 25.7
     },
     {
-      "stock_id": "6166",
+      "stock_id": "6005",
       "score": 25.7
     },
     {
-      "stock_id": "6183",
+      "stock_id": "6176",
       "score": 25.7
     },
     {
       "stock_id": "6184",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6191",
       "score": 25.7
     },
     {
@@ -2580,15 +1808,51 @@
       "score": 25.7
     },
     {
-      "stock_id": "6278",
+      "stock_id": "6216",
       "score": 25.7
     },
     {
-      "stock_id": "6414",
+      "stock_id": "6224",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6239",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6243",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6271",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6283",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6405",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6409",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6443",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6446",
       "score": 25.7
     },
     {
       "stock_id": "6449",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6464",
       "score": 25.7
     },
     {
@@ -2604,11 +1868,7 @@
       "score": 25.7
     },
     {
-      "stock_id": "6552",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6589",
+      "stock_id": "6598",
       "score": 25.7
     },
     {
@@ -2624,11 +1884,23 @@
       "score": 25.7
     },
     {
-      "stock_id": "6706",
+      "stock_id": "6668",
       "score": 25.7
     },
     {
-      "stock_id": "6790",
+      "stock_id": "6691",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6719",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6789",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6792",
       "score": 25.7
     },
     {
@@ -2636,15 +1908,19 @@
       "score": 25.7
     },
     {
-      "stock_id": "6806",
+      "stock_id": "6835",
       "score": 25.7
     },
     {
-      "stock_id": "6838",
+      "stock_id": "6862",
       "score": 25.7
     },
     {
-      "stock_id": "6916",
+      "stock_id": "6906",
+      "score": 25.7
+    },
+    {
+      "stock_id": "6921",
       "score": 25.7
     },
     {
@@ -2656,7 +1932,7 @@
       "score": 25.7
     },
     {
-      "stock_id": "7732",
+      "stock_id": "7736",
       "score": 25.7
     },
     {
@@ -2664,7 +1940,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "8045",
+      "stock_id": "7788",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8072",
       "score": 25.7
     },
     {
@@ -2676,7 +1956,23 @@
       "score": 25.7
     },
     {
+      "stock_id": "8103",
+      "score": 25.7
+    },
+    {
       "stock_id": "8104",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8131",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8150",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8163",
       "score": 25.7
     },
     {
@@ -2688,11 +1984,43 @@
       "score": 25.7
     },
     {
+      "stock_id": "8249",
+      "score": 25.7
+    },
+    {
       "stock_id": "8341",
       "score": 25.7
     },
     {
-      "stock_id": "8438",
+      "stock_id": "8374",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8422",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8429",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8467",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8499",
+      "score": 25.7
+    },
+    {
+      "stock_id": "8940",
+      "score": 25.7
+    },
+    {
+      "stock_id": "9103",
+      "score": 25.7
+    },
+    {
+      "stock_id": "9904",
       "score": 25.7
     },
     {
@@ -2700,11 +2028,11 @@
       "score": 25.7
     },
     {
-      "stock_id": "9925",
+      "stock_id": "9926",
       "score": 25.7
     },
     {
-      "stock_id": "9926",
+      "stock_id": "9930",
       "score": 25.7
     },
     {
@@ -2712,592 +2040,370 @@
       "score": 25.7
     },
     {
+      "stock_id": "9939",
+      "score": 25.7
+    },
+    {
       "stock_id": "9942",
       "score": 25.7
     },
     {
-      "stock_id": "1259",
-      "score": 25.7
+      "stock_id": "0053",
+      "score": 22.5
     },
     {
-      "stock_id": "1264",
-      "score": 25.7
+      "stock_id": "0056",
+      "score": 22.5
     },
     {
-      "stock_id": "1565",
-      "score": 25.7
+      "stock_id": "0057",
+      "score": 22.5
     },
     {
-      "stock_id": "1569",
-      "score": 25.7
+      "stock_id": "1314",
+      "score": 22.5
     },
     {
-      "stock_id": "1584",
-      "score": 25.7
+      "stock_id": "1340",
+      "score": 22.5
     },
     {
-      "stock_id": "2064",
-      "score": 25.7
+      "stock_id": "1513",
+      "score": 22.5
     },
     {
-      "stock_id": "2066",
-      "score": 25.7
+      "stock_id": "1514",
+      "score": 22.5
     },
     {
-      "stock_id": "2221",
-      "score": 25.7
+      "stock_id": "1524",
+      "score": 22.5
     },
     {
-      "stock_id": "2643",
-      "score": 25.7
+      "stock_id": "1537",
+      "score": 22.5
     },
     {
-      "stock_id": "2745",
-      "score": 25.7
+      "stock_id": "1717",
+      "score": 22.5
     },
     {
-      "stock_id": "2754",
-      "score": 25.7
+      "stock_id": "1736",
+      "score": 22.5
     },
     {
-      "stock_id": "2756",
-      "score": 25.7
+      "stock_id": "1737",
+      "score": 22.5
     },
     {
-      "stock_id": "2924",
-      "score": 25.7
+      "stock_id": "2023",
+      "score": 22.5
     },
     {
-      "stock_id": "2949",
-      "score": 25.7
+      "stock_id": "2104",
+      "score": 22.5
     },
     {
-      "stock_id": "3067",
-      "score": 25.7
+      "stock_id": "2332",
+      "score": 22.5
     },
     {
-      "stock_id": "3085",
-      "score": 25.7
+      "stock_id": "2352",
+      "score": 22.5
     },
     {
-      "stock_id": "3095",
-      "score": 25.7
+      "stock_id": "2362",
+      "score": 22.5
     },
     {
-      "stock_id": "3152",
-      "score": 25.7
+      "stock_id": "2363",
+      "score": 22.5
     },
     {
-      "stock_id": "3205",
-      "score": 25.7
+      "stock_id": "2364",
+      "score": 22.5
     },
     {
-      "stock_id": "3227",
-      "score": 25.7
+      "stock_id": "2365",
+      "score": 22.5
     },
     {
-      "stock_id": "3230",
-      "score": 25.7
+      "stock_id": "2382",
+      "score": 22.5
     },
     {
-      "stock_id": "3265",
-      "score": 25.7
+      "stock_id": "2395",
+      "score": 22.5
     },
     {
-      "stock_id": "3284",
-      "score": 25.7
+      "stock_id": "2401",
+      "score": 22.5
     },
     {
-      "stock_id": "3287",
-      "score": 25.7
+      "stock_id": "2498",
+      "score": 22.5
     },
     {
-      "stock_id": "3288",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3297",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3303",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3310",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3317",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3332",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3357",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3360",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3374",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3402",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3465",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3479",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3484",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3516",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3521",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3551",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3556",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3664",
-      "score": 25.7
-    },
-    {
-      "stock_id": "3710",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4111",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4114",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4123",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4127",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4128",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4129",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4130",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4166",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4420",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4503",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4510",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4523",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4533",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4538",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4568",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4580",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4584",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4735",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4743",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4749",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4754",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4806",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4946",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4950",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4951",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4971",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4974",
-      "score": 25.7
-    },
-    {
-      "stock_id": "4979",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5009",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5220",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5276",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5309",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5312",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5340",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5347",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5425",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5426",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5438",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5450",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5474",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5512",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5604",
-      "score": 25.7
-    },
-    {
-      "stock_id": "5701",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6021",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6113",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6122",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6126",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6156",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6173",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6195",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6221",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6259",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6275",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6294",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6417",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6510",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6516",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6538",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6561",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6570",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6578",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6596",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6616",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6624",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6642",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6654",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6662",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6667",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6720",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6730",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6752",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6803",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6811",
-      "score": 25.7
-    },
-    {
-      "stock_id": "6953",
-      "score": 25.7
-    },
-    {
-      "stock_id": "7556",
-      "score": 25.7
-    },
-    {
-      "stock_id": "7714",
-      "score": 25.7
-    },
-    {
-      "stock_id": "7717",
-      "score": 25.7
-    },
-    {
-      "stock_id": "7743",
-      "score": 25.7
-    },
-    {
-      "stock_id": "7757",
-      "score": 25.7
-    },
-    {
-      "stock_id": "7767",
-      "score": 25.7
-    },
-    {
-      "stock_id": "7777",
-      "score": 25.7
-    },
-    {
-      "stock_id": "7782",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8032",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8071",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8077",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8080",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8083",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8085",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8227",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8277",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8358",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8415",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8435",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8436",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8455",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8929",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8938",
-      "score": 25.7
-    },
-    {
-      "stock_id": "8941",
-      "score": 25.7
-    },
-    {
-      "stock_id": "9949",
-      "score": 25.7
+      "stock_id": "2511",
+      "score": 22.5
     },
     {
       "stock_id": "2723",
       "score": 22.5
     },
     {
-      "stock_id": "3672",
+      "stock_id": "2731",
       "score": 22.5
     },
     {
-      "stock_id": "6548",
+      "stock_id": "2753",
       "score": 22.5
     },
     {
-      "stock_id": "6556",
+      "stock_id": "2812",
       "score": 22.5
+    },
+    {
+      "stock_id": "2850",
+      "score": 22.5
+    },
+    {
+      "stock_id": "2887",
+      "score": 22.5
+    },
+    {
+      "stock_id": "2890",
+      "score": 22.5
+    },
+    {
+      "stock_id": "3034",
+      "score": 22.5
+    },
+    {
+      "stock_id": "3481",
+      "score": 22.5
+    },
+    {
+      "stock_id": "3694",
+      "score": 22.5
+    },
+    {
+      "stock_id": "3708",
+      "score": 22.5
+    },
+    {
+      "stock_id": "3711",
+      "score": 22.5
+    },
+    {
+      "stock_id": "4119",
+      "score": 22.5
+    },
+    {
+      "stock_id": "4736",
+      "score": 22.5
+    },
+    {
+      "stock_id": "4770",
+      "score": 22.5
+    },
+    {
+      "stock_id": "4961",
+      "score": 22.5
+    },
+    {
+      "stock_id": "4976",
+      "score": 22.5
+    },
+    {
+      "stock_id": "5007",
+      "score": 22.5
+    },
+    {
+      "stock_id": "5269",
+      "score": 22.5
+    },
+    {
+      "stock_id": "5434",
+      "score": 22.5
+    },
+    {
+      "stock_id": "6116",
+      "score": 22.5
+    },
+    {
+      "stock_id": "6257",
+      "score": 22.5
+    },
+    {
+      "stock_id": "6277",
+      "score": 22.5
+    },
+    {
+      "stock_id": "6278",
+      "score": 22.5
+    },
+    {
+      "stock_id": "6414",
+      "score": 22.5
+    },
+    {
+      "stock_id": "6955",
+      "score": 22.5
+    },
+    {
+      "stock_id": "8481",
+      "score": 22.5
+    },
+    {
+      "stock_id": "9925",
+      "score": 22.5
+    },
+    {
+      "stock_id": "9927",
+      "score": 22.5
+    },
+    {
+      "stock_id": "9958",
+      "score": 22.5
+    }
+  ],
+  "dcf_results": [
+    {
+      "stock_id": "3168",
+      "name": "DATA IMAGE CORPORATION",
+      "sector": "Technology",
+      "price": 41.15,
+      "tech_score": 60.8,
+      "fundamental_score": 57.1,
+      "combined_score": 59.0,
+      "pe": 15.9,
+      "dividend_yield": 736.0,
+      "revenue_growth": 6.8,
+      "fcf_yield": 4.71,
+      "intrinsic_value": 80.8,
+      "safety_margin": 49.1,
+      "wacc": 6.0,
+      "recommendation": "買進 (技術+基本面雙確認)"
+    },
+    {
+      "stock_id": "2028",
+      "name": "WEI CHIH STEEL INDUSTRIAL CO",
+      "sector": "Basic Materials",
+      "price": 18.9,
+      "tech_score": 59.8,
+      "fundamental_score": 42.9,
+      "combined_score": 51.3,
+      "pe": 67.5,
+      "dividend_yield": 355.0,
+      "revenue_growth": -7.1,
+      "fcf_yield": 19.27,
+      "intrinsic_value": 116.5,
+      "safety_margin": 83.8,
+      "wacc": 6.6,
+      "recommendation": "觀察 (基本面低估)"
+    },
+    {
+      "stock_id": "1713",
+      "name": "CATHAY CHEMICAL",
+      "sector": "Basic Materials",
+      "price": 48.05,
+      "tech_score": 59.8,
+      "fundamental_score": 35.7,
+      "combined_score": 47.8,
+      "pe": 12.5,
+      "dividend_yield": 1561.0,
+      "revenue_growth": -10.9,
+      "fcf_yield": -1.27,
+      "intrinsic_value": null,
+      "safety_margin": null,
+      "wacc": null,
+      "recommendation": "中性"
+    },
+    {
+      "stock_id": "2014",
+      "name": "CHUNG HUNG STEEL CO",
+      "sector": "Basic Materials",
+      "price": 18.6,
+      "tech_score": 59.8,
+      "fundamental_score": 35.7,
+      "combined_score": 47.8,
+      "pe": 0,
+      "dividend_yield": 0,
+      "revenue_growth": -41.3,
+      "fcf_yield": 8.91,
+      "intrinsic_value": 57.1,
+      "safety_margin": 67.4,
+      "wacc": 6.4,
+      "recommendation": "觀察 (基本面低估)"
+    },
+    {
+      "stock_id": "2025",
+      "name": "CHIEN SHING STAINLESS STEEL CO",
+      "sector": "Basic Materials",
+      "price": 11.8,
+      "tech_score": 59.8,
+      "fundamental_score": 14.3,
+      "combined_score": 37.0,
+      "pe": 0,
+      "dividend_yield": 0,
+      "revenue_growth": 19.8,
+      "fcf_yield": -35.73,
+      "intrinsic_value": null,
+      "safety_margin": null,
+      "wacc": null,
+      "recommendation": "中性"
+    },
+    {
+      "stock_id": "1905",
+      "name": "CHUNG HWA PULP",
+      "sector": "Basic Materials",
+      "price": 12.35,
+      "tech_score": 59.8,
+      "fundamental_score": 0.0,
+      "combined_score": 29.9,
+      "pe": 0,
+      "dividend_yield": 0,
+      "revenue_growth": -7.6,
+      "fcf_yield": -12.52,
+      "intrinsic_value": null,
+      "safety_margin": null,
+      "wacc": null,
+      "recommendation": "中性"
+    },
+    {
+      "stock_id": "2007",
+      "name": "YIEH HSING ENTERPRISE CO",
+      "sector": "Basic Materials",
+      "price": 8.49,
+      "tech_score": 59.8,
+      "fundamental_score": 0.0,
+      "combined_score": 29.9,
+      "pe": 0,
+      "dividend_yield": 0,
+      "revenue_growth": -41.4,
+      "fcf_yield": -7.2,
+      "intrinsic_value": null,
+      "safety_margin": null,
+      "wacc": null,
+      "recommendation": "中性"
+    },
+    {
+      "stock_id": "1805",
+      "name": "BETTER LIFE GROUP CO LTD",
+      "sector": "Real Estate",
+      "price": 11.55,
+      "tech_score": 59.8,
+      "fundamental_score": -14.3,
+      "combined_score": 22.8,
+      "pe": 57.8,
+      "dividend_yield": 0,
+      "revenue_growth": -69.8,
+      "fcf_yield": -21.1,
+      "intrinsic_value": null,
+      "safety_margin": null,
+      "wacc": null,
+      "recommendation": "中性"
     }
   ]
 }
