@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""每日盤前自動執行 - 簡單可靠版"""
+"""每日盤前自動執行 - 雙策略選股版"""
 
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.absolute()))
 
+import argparse
 import json
 import time
 import warnings
@@ -13,11 +14,13 @@ warnings.filterwarnings('ignore')
 from datetime import datetime
 
 from src.data.yahoo_fetcher import YahooFetcher
-from src.indicators.technical import calculate_ma, calculate_rsi, calculate_macd, calculate_bollinger_bands
 from strategy_backtest import load_strategy_state, prepare_data
+from src.dual_strategy import SwingStrategy, InvestStrategy
 
-LOG_FILE = Path(__file__).parent / "morning_run.log"
-RESULT_FILE = Path(__file__).parent / "today_picks.json"
+BASE_DIR = Path(__file__).parent
+LOG_FILE = BASE_DIR / "morning_run.log"
+RESULT_FILE = BASE_DIR / "today_picks.json"
+
 
 def log(msg):
     ts = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -26,237 +29,264 @@ def log(msg):
     with open(LOG_FILE, 'a') as f:
         f.write(line + '\n')
 
-def run():
-    today = datetime.now().strftime('%Y-%m-%d')
-    log(f"=== 盤前選股開始 ({today}) ===")
-    
-    # 載入策略權重
-    state = load_strategy_state()
-    if state:
-        weights = state.get('strategy_weights', {})
-        log(f"使用回測權重 (更新: {state['last_updated']})")
-    else:
-        weights = {'rsi_oversold': 0.3, 'golden_cross': 0.2, 'bollinger_lower': 0.17,
-                   'multi_trend': 0.13, 'macd_cross': 0.11, 'composite': 0.09}
-        log("無回測資料，使用預設權重")
-    
-    # 載入完整股票池
-    universe_file = Path(__file__).parent / "stock_universe.json"
+
+def load_stocks():
+    """載入股票池"""
+    universe_file = BASE_DIR / "stock_universe.json"
     if universe_file.exists():
         with open(universe_file) as f:
             universe = json.load(f)
         twse_stocks = universe.get('twse', [])
         tpex_stocks = universe.get('tpex', [])
-        stocks = twse_stocks  # 只掃上市，排除上櫃
         log(f"股票池: 上市 {len(twse_stocks)} 檔 (上櫃 {len(tpex_stocks)} 檔已排除)")
-    else:
-        stocks = [
-            '2330','2317','2454','2308','2412','2881','2882','2886','2891',
-            '8046','2486','3189','3037','2337','2344','2603','1301','2002',
-        ]
-        log(f"股票池: 預設 {len(stocks)} 檔 (無 stock_universe.json)")
-    
-    yf = YahooFetcher()
+        return twse_stocks
+    fallback = [
+        '2330', '2317', '2454', '2308', '2412', '2881', '2882', '2886', '2891',
+        '8046', '2486', '3189', '3037', '2337', '2344', '2603', '1301', '2002',
+    ]
+    log(f"股票池: 預設 {len(fallback)} 檔 (無 stock_universe.json)")
+    return fallback
+
+
+def fetch_stock_data(sid, yf_yf_fetcher):
+    """取得個股技術面資料，Yahoo 失敗時 fallback 到 TWSE"""
+    try:
+        symbol = f"{sid}.TW"
+        df = yf_yf_fetcher.get_stock_data(symbol, period='3mo')
+        if df.empty or len(df) < 20:
+            raise ValueError("insufficient data")
+        return prepare_data(df)
+    except Exception:
+        pass
+
+    try:
+        from src.data.yf_fetcher import TWSEFetcher
+        yf_fetcher = TWSEFetcher()
+        df = yf_fetcher.get_historical_price(sid, months=2)
+        if df.empty or len(df) < 20:
+            raise ValueError("insufficient data")
+        log(f"  {sid}: TWSE fallback 成功")
+        time.sleep(3)
+        return prepare_data(df)
+    except Exception:
+        return None
+
+
+def fetch_financial_data(sid):
+    """取得基本面資料（含 DCF），用於投資策略"""
+    try:
+        from dcf_analysis import get_financial_data, calculate_dcf
+        fin = get_financial_data(sid)
+        if not fin:
+            return None
+        dcf = calculate_dcf(fin)
+        if dcf:
+            fin['dcf_value'] = dcf.get('intrinsic_value', 0)
+            fin['dcf_margin'] = dcf.get('safety_margin', 0)
+        return fin
+    except Exception as e:
+        # log(f"DCF 失敗 {sid}: {e}")
+        return None
+
+
+def run_swing(stocks, yf_fetcher):
+    """執行短線策略"""
+    strategy = SwingStrategy()
+    log(f"\n{'='*60}")
+    log(f"策略: {strategy.name} — {strategy.description}")
+    log(f"{'='*60}")
+
     results = []
     failed = []
-    
+
     for sid in stocks:
-        try:
-            # 上市 .TW, 上櫃 .TWO
-            suffix = '.TW'  # 只有上市股
-            symbol = f"{sid}{suffix}"
-            df = yf.get_stock_data(symbol, period='3mo')
-            if df.empty or len(df) < 20:
-                failed.append(sid)
-                continue
-            
-            df = prepare_data(df)
-            l = df.iloc[-1]
-            p = df.iloc[-2]
-            
-            # 評分
-            score = 0
-            
-            # RSI (權重最高)
-            w_rsi = weights.get('rsi_oversold', 0.3)
-            if l['rsi'] < 25: score += 3 * w_rsi
-            elif l['rsi'] < 35: score += 1.5 * w_rsi
-            elif l['rsi'] < 50: score += 0.5 * w_rsi
-            elif l['rsi'] > 70: score -= 1 * w_rsi
-            
-            # 均線
-            w_ma = weights.get('golden_cross', 0.2) + weights.get('multi_trend', 0.13)
-            if l['close'] > l['ma5'] > l['ma20']: score += 2 * w_ma
-            elif l['close'] > l['ma20']: score += 1 * w_ma
-            elif l['close'] < l['ma5'] < l['ma20']: score -= 2 * w_ma
-            
-            # MACD
-            w_macd = weights.get('macd_cross', 0.11)
-            if l['macd_hist'] > 0 and l['macd_hist'] > p['macd_hist']: score += 2 * w_macd
-            elif l['macd_hist'] > 0: score += 1 * w_macd
-            elif l['macd_hist'] < 0: score -= 1 * w_macd
-            
-            # 布林
-            w_bb = weights.get('bollinger_lower', 0.17)
-            if l['close'] <= l['bb_lower']: score += 3 * w_bb
-            elif l['close'] >= l['bb_upper']: score -= 1 * w_bb
-            
-            # 正規化 0-100
-            max_s = 3 * (w_rsi + w_ma + w_macd + w_bb)
-            min_s = -2 * (w_rsi + w_ma + w_macd + w_bb)
-            normalized = (score - min_s) / (max_s - min_s) * 100 if (max_s - min_s) > 0 else 50
-            
-            ma_trend = '多頭' if l['close'] > l['ma5'] > l['ma20'] else '空頭' if l['close'] < l['ma5'] < l['ma20'] else '盤整'
-            change = (l['close'] - p['close']) / p['close'] * 100
-            
-            results.append({
-                'stock_id': sid,
-                'close': float(l['close']),
-                'change_pct': round(change, 2),
-                'rsi': round(float(l['rsi']), 1),
-                'ma_trend': ma_trend,
-                'score': round(normalized, 1),
-                'macd_hist': round(float(l['macd_hist']), 2),
-            })
-            
-            time.sleep(0.2)
-        except Exception as e:
-            # Yahoo 失敗就嘗試 TWSE
-            try:
-                from src.data.fetcher import TWSEFetcher
-                fetcher = TWSEFetcher()
-                df = fetcher.get_historical_price(sid, months=2)
-                if df.empty or len(df) < 20:
-                    raise ValueError("no data")
-                df = prepare_data(df)
-                l = df.iloc[-1]
-                p = df.iloc[-2]
-                
-                score = 0
-                w_rsi = weights.get('rsi_oversold', 0.3)
-                if l['rsi'] < 25: score += 3 * w_rsi
-                elif l['rsi'] < 35: score += 1.5 * w_rsi
-                elif l['rsi'] < 50: score += 0.5 * w_rsi
-                elif l['rsi'] > 70: score -= 1 * w_rsi
-                
-                w_ma = weights.get('golden_cross', 0.2) + weights.get('multi_trend', 0.13)
-                if l['close'] > l['ma5'] > l['ma20']: score += 2 * w_ma
-                elif l['close'] > l['ma20']: score += 1 * w_ma
-                elif l['close'] < l['ma5'] < l['ma20']: score -= 2 * w_ma
-                
-                w_macd = weights.get('macd_cross', 0.11)
-                if l['macd_hist'] > 0 and l['macd_hist'] > p['macd_hist']: score += 2 * w_macd
-                elif l['macd_hist'] > 0: score += 1 * w_macd
-                elif l['macd_hist'] < 0: score -= 1 * w_macd
-                
-                w_bb = weights.get('bollinger_lower', 0.17)
-                if l['close'] <= l['bb_lower']: score += 3 * w_bb
-                elif l['close'] >= l['bb_upper']: score -= 1 * w_bb
-                
-                max_s = 3 * (w_rsi + w_ma + w_macd + w_bb)
-                min_s = -2 * (w_rsi + w_ma + w_macd + w_bb)
-                normalized = (score - min_s) / (max_s - min_s) * 100 if (max_s - min_s) > 0 else 50
-                
-                ma_trend = '多頭' if l['close'] > l['ma5'] > l['ma20'] else '空頭' if l['close'] < l['ma5'] < l['ma20'] else '盤整'
-                change = (l['close'] - p['close']) / p['close'] * 100
-                
-                results.append({
-                    'stock_id': sid, 'close': float(l['close']), 'change_pct': round(change, 2),
-                    'rsi': round(float(l['rsi']), 1), 'ma_trend': ma_trend,
-                    'score': round(normalized, 1), 'macd_hist': round(float(l['macd_hist']), 2),
-                })
-                log(f"  {sid}: TWSE fallback 成功")
-                time.sleep(3)
-                continue
-            except:
-                pass
-            failed.append(f"{sid}")
+        df = fetch_stock_data(sid, yf_fetcher)
+        if df is None:
+            failed.append(sid)
             time.sleep(0.5)
-    
-    # 排序
+            continue
+
+        score_result = strategy.score(df)
+        if score_result is None:
+            failed.append(sid)
+            continue
+
+        rec = strategy.make_recommendation({**score_result, 'stock_id': sid})
+        rec['stock_id'] = sid
+        results.append(rec)
+        time.sleep(0.2)
+
     results.sort(key=lambda x: x['score'], reverse=True)
-    
-    # 分類
+
     buys = [r for r in results if r['score'] >= 65]
     watches = [r for r in results if 50 <= r['score'] < 65]
-    avoids = [r for r in results if r['score'] < 40]
-    
-    # 輸出
-    log(f"\n分析完成: {len(results)}/{len(stocks)} 檔 (失敗: {len(failed)})")
-    
+
+    log(f"\n短線分析完成: {len(results)}/{len(stocks)} 檔 (失敗: {len(failed)})")
     if buys:
-        log(f"\n買進候選 ({len(buys)} 檔):")
+        log(f"\n強勢候選 ({len(buys)} 檔):")
         for r in buys:
-            log(f"  {r['stock_id']}: {r['close']:.0f}元 評分{r['score']} RSI{r['rsi']} {r['ma_trend']}")
+            log(f"  {r['stock_id']}: {r['close']:.0f}元 評分{r['score']} "
+                f"RSI{r['rsi']} {r['ma_trend']} | "
+                f"進場{r.get('entry','-')} 停損{r.get('stop_loss','-')} 目標{r.get('target','-')}")
     else:
-        log("\n無買進候選")
-    
+        log("\n無強勢候選")
+
     if watches:
-        log(f"\n觀察名單 ({len(watches)} 檔):")
+        log(f"\n觀察 ({len(watches)} 檔):")
         for r in watches[:8]:
             log(f"  {r['stock_id']}: {r['close']:.0f}元 評分{r['score']} RSI{r['rsi']} {r['ma_trend']}")
-    
-    if avoids:
-        log(f"\n避開 ({len(avoids)} 檔):")
-        for r in avoids:
-            log(f"  {r['stock_id']}: 評分{r['score']} {r['ma_trend']}")
-    
-    # 儲存結果
-    output = {
-        'date': today,
-        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+
+    return {
+        'strategy': 'swing',
+        'strategy_name': strategy.name,
         'total_analyzed': len(results),
         'failed': failed,
         'buys': buys,
         'watches': watches[:8],
-        'avoids': [{'stock_id': r['stock_id'], 'score': r['score']} for r in avoids],
+        'avoids': [{'stock_id': r['stock_id'], 'score': r['score']}
+                   for r in results if r['score'] < 40],
+        'all_results': results,
     }
+
+
+def run_invest(stocks, yf_fetcher):
+    """執行投資佈局策略"""
+    strategy = InvestStrategy()
+    log(f"\n{'='*60}")
+    log(f"策略: {strategy.name} — {strategy.description}")
+    log(f"{'='*60}")
+
+    results = []
+    failed = []
+
+    for sid in stocks:
+        df = fetch_stock_data(sid, yf_fetcher)
+        if df is None:
+            failed.append(sid)
+            time.sleep(0.5)
+            continue
+
+        fin_data = fetch_financial_data(sid)
+        score_result = strategy.score(df, fin_data=fin_data)
+        if score_result is None:
+            failed.append(sid)
+            continue
+
+        rec = strategy.make_recommendation({**score_result, 'stock_id': sid})
+        rec['stock_id'] = sid
+        if fin_data:
+            rec['name'] = fin_data.get('name', sid)
+            rec['sector'] = fin_data.get('sector', '')
+            rec['pe'] = fin_data.get('pe', 0)
+            rec['dividend_yield'] = round(fin_data.get('dividend_yield', 0) * 100, 2)
+            rec['revenue_growth'] = round(fin_data.get('revenue_growth', 0) * 100, 1)
+            rec['dcf_value'] = fin_data.get('dcf_value')
+            rec['dcf_margin'] = fin_data.get('dcf_margin')
+        results.append(rec)
+        time.sleep(0.3)
+
+    results.sort(key=lambda x: x['score'], reverse=True)
+
+    buys = [r for r in results if r['score'] >= 65]
+    watches = [r for r in results if 50 <= r['score'] < 65]
+
+    log(f"\n投資分析完成: {len(results)}/{len(stocks)} 檔 (失敗: {len(failed)})")
+    if buys:
+        log(f"\n價值低估 ({len(buys)} 檔):")
+        for r in buys:
+            iv = f"內在{r['intrinsic_value']:.0f}" if r.get('intrinsic_value') else ""
+            sm = f"邊際{r['safety_margin']:+.1f}%" if r.get('safety_margin') is not None else ""
+            log(f"  {r['stock_id']}: {r['close']:.0f}元 評分{r['score']} "
+                f"{iv} {sm} | {r.get('action', '')}")
+    else:
+        log("\n無價值低估標的")
+
+    if watches:
+        log(f"\n觀察佈局 ({len(watches)} 檔):")
+        for r in watches[:8]:
+            sm = f"邊際{r['safety_margin']:+.1f}%" if r.get('safety_margin') is not None else ""
+            log(f"  {r['stock_id']}: {r['close']:.0f}元 評分{r['score']} {sm}")
+
+    return {
+        'strategy': 'invest',
+        'strategy_name': strategy.name,
+        'total_analyzed': len(results),
+        'failed': failed,
+        'buys': buys,
+        'watches': watches[:8],
+        'avoids': [{'stock_id': r['stock_id'], 'score': r['score']}
+                   for r in results if r['score'] < 40],
+        'all_results': results,
+    }
+
+
+def run(strategy='both'):
+    today = datetime.now().strftime('%Y-%m-%d')
+    log(f"=== 盤前選股開始 ({today}) 策略: {strategy} ===")
+
+    stocks = load_stocks()
     
+    output = {
+        'date': today,
+        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'strategy': strategy,
+    }
+
+    yf_fetcher = YahooFetcher()
+
+    if strategy in ('swing', 'both'):
+        swing_result = run_swing(stocks, yf_fetcher)
+        output['swing'] = swing_result
+
+    if strategy in ('invest', 'both'):
+        invest_result = run_invest(stocks, yf_fetcher)
+        output['invest'] = invest_result
+
+    # 儲存結果
     with open(RESULT_FILE, 'w') as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
-    
+        json.dump(output, f, indent=2, ensure_ascii=False, default=str)
     log(f"\n結果儲存: {RESULT_FILE}")
-    
-    # 第二階段: DCF 基本面分析 (只分析觀察名單)
-    if buys or watches:
-        log(f"\n--- DCF 基本面分析 ---")
-        try:
-            from dcf_analysis import analyze_watchlist
-            dcf_targets = buys + watches[:8]
-            dcf_results = analyze_watchlist(dcf_targets)
-            
-            if dcf_results:
-                for r in dcf_results:
-                    iv = f"{r['intrinsic_value']:.0f}" if r['intrinsic_value'] else "N/A"
-                    sm = f"{r['safety_margin']:+.1f}%" if r['safety_margin'] is not None else "N/A"
-                    log(f"  {r['stock_id']} {r['name'][:8]}: 綜合{r['combined_score']:.0f} 內在{iv} 邊際{sm} {r['recommendation']}")
-                
-                output['dcf_results'] = dcf_results
-        except Exception as e:
-            log(f"  DCF 分析失敗: {e}")
-    
+
     # 生成分析報告
     try:
-        from report_generator import generate_report
-        report = generate_report()
-        log(f"\n分析報告已生成: daily_report.md")
+        from report_generator import generate_dual_report
+        generate_dual_report(output)
+        log(f"\n分析報告已生成")
     except Exception as e:
         log(f"報告生成失敗: {e}")
-    
-    # 用 Ollama 生成選股摘要 (省 token)
+
+    # Ollama 摘要
     try:
         from token_stats import query_ollama
-        summary_prompt = f"用繁體中文簡短總結今日選股：分析{len(results)}檔，買進候選{len(buys)}檔，觀察{len(watches)}檔。觀察名單前3名：{', '.join(s['stock_id'] for s in watches[:3])}。用3行以內回答。"
+        swing_buys = len(output.get('swing', {}).get('buys', []))
+        invest_buys = len(output.get('invest', {}).get('buys', []))
+        total = sum(r.get('total_analyzed', 0) for r in [output.get('swing', {}), output.get('invest', {})])
+        summary_prompt = (
+            f"用繁體中文簡短總結今日雙策略選股：分析{total}檔，"
+            f"短線候選{swing_buys}檔，投資候選{invest_buys}檔。用3行以內回答。"
+        )
         ollama_result = query_ollama(summary_prompt)
         if 'response' in ollama_result:
             log(f"\n[Ollama 摘要] {ollama_result['response'][:200]}")
             log(f"[省 token: {ollama_result['total_tokens']}]")
     except Exception as e:
         log(f"Ollama 摘要失敗: {e}")
-    
+
     log(f"=== 盤前選股完成 ===")
-    
     return output
 
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='每日盤前雙策略選股')
+    parser.add_argument(
+        '--strategy', '-s',
+        choices=['swing', 'invest', 'both'],
+        default='both',
+        help='選股策略: swing(短線), invest(投資), both(雙策略, 預設)',
+    )
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    run()
+    args = parse_args()
+    run(strategy=args.strategy)

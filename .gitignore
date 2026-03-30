@@ -10,6 +10,8 @@ ENV/
 
 # 設定檔 (含敏感資訊)
 config/settings.py
+.env
+.certs/
 
 # 快取資料
 cache/
@@ -37,3 +39,10 @@ Thumbs.db
 
 # 輸出圖表
 output_*.png
+
+# 暫時性輸出檔案
+*.log
+today_picks*.json
+portfolio.json
+*_report.md
+morning_run_output.txt
